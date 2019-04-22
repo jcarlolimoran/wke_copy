@@ -1,0 +1,49 @@
+Link_MainMenu_Stories=//a[contains(.,'Stories') and @href="/admin/stories"]LOCATORxpath
+Link_MainMenu_Flowcharts=//a[contains(.,'Flowcharts') and @href="/admin/flowchart"]LOCATORxpath
+Link_MainMenu_Students=//a[contains(.,'Students') and @href="/admin/students"]LOCATORxpath
+Link_MainMenu_Researchers=//a[contains(.,'Researchers') and @href="/admin/researchers"]LOCATORxpath
+Link_MainMenu_Classrooms=//a[contains(.,'Classrooms') and @href="/admin/classrooms"]LOCATORxpath
+Link_MainMenu_UserLogs=//a[contains(.,'User Logs') and @href="/admin/logs"]LOCATORxpath
+Link_MainMenu_OpenEndedAnswers=//a[contains(.,'Open-Ended Answers') and @href="/admin/answers"]LOCATORxpath
+
+Stories
+Input_Stories_CreateNewStory=//form[contains(.,"Create a new story")]//inputLOCATORxpath
+	 Section_Stories_Story=//div[@class="list-item" and contains(.,"Automation Test")]/spanLOCATORxpath
+	 Button_Stories_EditStory=//div[@class="list-item" and contains(.,"Automation Test")]//button[contains(@aria-describedby,"edit")]LOCATORxpath
+	 Button_Stories_DuplicateStory=//div[@class="list-item" and contains(.,"Automation Test")]//button[contains(@aria-describedby,"duplicate")]LOCATORxpath
+	 Button_Stories_DeleteStory=//div[@class="list-item" and contains(.,"Automation Test")]//button[contains(@aria-describedby,"delete")]LOCATORxpath
+Input_Stories_CreateNewBranch=//form[contains(.,"Create a new branch")]//inputLOCATORxpath
+	Section_Stories_Branch=//div[@class="list-item" and contains(.,"chapter1")]/spanLOCATORxpath
+	Button_Stories_EditBranch=//div[@class="list-item" and contains(.,"chapter1")]//button[contains(@aria-describedby,"edit")]LOCATORxpath
+	 Button_Stories_DuplicateBranch=//div[@class="list-item" and contains(.,"chapter1")]//button[contains(@aria-describedby,"duplicate")]LOCATORxpath
+	 Button_Stories_DeleteBranch=//div[@class="list-item" and contains(.,"chapter1")]//button[contains(@aria-describedby,"delete")]LOCATORxpath
+
+Input_Stories_CreateNewPage=//form[contains(.,"Create a new page")]//inputLOCATORxpath
+	Section_Stories_Page=//div[@class="list-item" and contains(.,"page1")]/spanLOCATORxpath
+	Button_Stories_EditPage=//div[@class="list-item" and contains(.,"page1")]//button[contains(@aria-describedby,"edit")]LOCATORxpath
+	 Button_Stories_DuplicatePage=//div[@class="list-item" and contains(.,"page1")]//button[contains(@aria-describedby,"duplicate")]LOCATORxpath
+	 Button_Stories_DeletePage=//div[@class="list-item" and contains(.,"page1")]//button[contains(@aria-describedby,"delete")]LOCATORxpath
+
+
+
+Story Settings
+Input_StorySettings_StoryTitle=//input[@id="titleInput"]LOCATORxpath
+Select_StorySettings_FirstBranch=//select[@label="First branch"]LOCATORxpath
+Select_StorySettings_DefaultFont=(//div[@class="form-group" and contains(.,"Default font")]//select)[1]LOCATORxpath
+Select_StorySettings_DefaultFont=(//div[@class="form-group" and contains(.,"Default font size")]//select)[1]LOCATORxpath
+Button_StorySettings_AddCharacter=//span[text()="Add"]LOCATORxpath
+Select_StorySettings_Gender1=(//div[@class="edit-character"]//select)[1]LOCATORxpath
+Select_StorySettings_Gender2=(//div[@class="edit-character"]//select)[2]LOCATORxpath
+Select_StorySettings_Gender3=(//div[@class="edit-character"]//select)[3]LOCATORxpath
+Select_StorySettings_Gender4=(//div[@class="edit-character"]//select)[4]LOCATORxpath
+Input_StorySettings_CharacterPromptPageHeading=//div[@class="form-group" and contains(.,"Character Prompt Page Heading")]//textareaLOCATORxpath
+Input_StorySettings_CharacterPromptPageHeading=//div[@class="form-group" and contains(.,"Character Prompt Page Instructions")]//textareaLOCATORxpath
+Input_StorySettings_PageNumberPrompt=//div[contains(@class,"form-group") and contains(.,"Page #")]//inputLOCATORxpath
+Button_StorySettings_Cancel=//button[contains(.,'Cancel')]LOCATORxpath
+Button_StorySettings_Save=//button[contains(.,'Save')]LOCATORxpath
+
+
+Edit Page
+Input_EditPage_ID=//input[@name="id"]LOCATORxpath
+Input_EditPage_Description=//input[@name="description"]
+Select_EditPage_PageType

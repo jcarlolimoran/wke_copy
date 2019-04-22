@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="WKE Tests" verbose="1">
+	<test name="WKE Tests" preserve-order="true">
+		<classes>
+			<class name="test.MainTest">
+				<methods>
+				 <!--
+				 	
+					<include name="Stories"/>
+					<include name="Pages"/>	
+					<include name="PageNavigations"/>	
+					<include name="Students"/>			
+					<include name="Researchers"/>
+					<include name="Classrooms"/>
+					<include name="StudentReadingExperience"/>	
+					<include name="UserLogs"/>
+					<include name="OpenEndedAnswers"/>
+					<include name="Clone_DeleteRecords"/>
+					 --> 
+					 
+
+					
+					
+					
+				
+					<include name="Stories"/>
+					<include name="Pages"/>	
+					<include name="PageNavigations"/>	
+					<include name="Students"/>			
+					<include name="Researchers"/>
+					<include name="Classrooms"/>
+					<include name="StudentReadingExperience"/>	
+					<include name="UserLogs"/>
+					<include name="OpenEndedAnswers"/>
+					<include name="Clone_DeleteRecords"/>
+				
+				
+				
+			
+			
+								
+						
+			
+				
+					
+					
+				
+	
+		
+							
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
