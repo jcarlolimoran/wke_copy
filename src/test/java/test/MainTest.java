@@ -441,7 +441,9 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
   
   @BeforeTest
   public void beforeTest() throws IOException {
-	  
+	  File image1 = new File("images\\page1.jpg");
+	  String image_path = file.getAbsoluteFile().getParent();
+	  System.out.println(image_path);
 	  
 	  fs = new FileInputStream("data.properties");
 	  prop.load(fs);
@@ -454,6 +456,8 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
 	 //enable/disable runtime variable//
 	 
 	 RuntimeVariables.writeVariableFile();
+	 
+	 
 	
 	
 	 prod_site= prop.getProperty("URL_Prod");
