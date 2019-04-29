@@ -95,7 +95,7 @@ public class MainTest {
 @Test (priority=1)
 	public void Researchers() throws Exception{
 
-		browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+		browser = CommonMethods.getVariableFromProperties("browser");
 		ExecuteTestSuite("1_Researchers",prod_site,browser);
 			  
 		  }
@@ -103,7 +103,7 @@ public class MainTest {
 @Test  (priority=2)
 public void Stories() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("2_Stories",prod_site,browser);
 		  
 	  }
@@ -111,7 +111,7 @@ public void Stories() throws Exception{
 @Test  (priority=3)
 public void Pages() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("2.1_Pages",prod_site,browser);
 		  
 	  }
@@ -119,7 +119,7 @@ public void Pages() throws Exception{
 @Test  (priority=4)
 public void PageNavigations() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("2.2_PageNavigations",prod_site,browser);
 		  
 	  }
@@ -127,7 +127,7 @@ public void PageNavigations() throws Exception{
 @Test  (priority=5)
 	public void Classrooms() throws Exception{
 
-		browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+		browser = CommonMethods.getVariableFromProperties("browser");
 		ExecuteTestSuite("3_Classrooms",prod_site,browser);
 			  
 		  }
@@ -135,7 +135,7 @@ public void PageNavigations() throws Exception{
 @Test (dependsOnMethods= {"Classrooms"} , priority =6)
 public void Students() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("4_Students",prod_site,browser);
 		  
 	  }
@@ -144,7 +144,7 @@ public void Students() throws Exception{
 @Test (dependsOnMethods= {"Students"} , priority =7)
 public void StudentReadingExperience() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("5_StudentReadingExperience",prod_site,browser);
 		  
 	  }
@@ -153,7 +153,7 @@ public void StudentReadingExperience() throws Exception{
 @Test (dependsOnMethods= {"StudentReadingExperience"} , priority =8)
 public void UserLogs() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("6_UserLogs",prod_site,browser);
 		  
 	  }
@@ -161,7 +161,7 @@ public void UserLogs() throws Exception{
 @Test (dependsOnMethods= {"Students"} , priority =9)
 public void OpenEndedAnswers() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("7_OpenEndedAnswers",prod_site,browser);
 		  
 	  }
@@ -169,7 +169,7 @@ public void OpenEndedAnswers() throws Exception{
 @Test (dependsOnMethods= {"Stories"} , priority =10)
 public void Clone_DeleteRecords() throws Exception{
 
-	browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("8_Clone_DeleteRecords",prod_site,browser);
 		  
 	  }
@@ -187,7 +187,7 @@ public void tester() throws Exception{
   @Test 
   public void dummy() throws Exception{
 
-	  browser = CommonMethods.getVariableFromProperties("browserChromeOSX");
+	  browser = CommonMethods.getVariableFromProperties("browser");
 	  ExecuteTestSuite("dummy",prod_site,browser);
 	  
   }
