@@ -445,6 +445,19 @@ public class Tests {
         		System.out.println(" ");
         		}
         	
+        	else if(isVariable.equals("ImagePath")){
+        		System.out.println("Performing Test# "+ MainTest.currentTest);
+        		System.out.print(TestDescription);
+        	
+        		String ImagePath = CommonMethods.getPath("images\\page1.jpg", CommonMethods.getVariable(InputKey));
+        		System.out.println("ImagePath "+ ImagePath);
+        		
+        		cm.SendKeys(MainTest.d, LocatorID, ImagePath, LocatorType);
+        		System.out.println(" ");
+        		System.out.println("ACTION _keypress initiated");
+        		System.out.println(" ");
+        		}
+        	
          	else if(isVariable.equals("wDate")){
         		System.out.println("Performing Test# "+ MainTest.currentTest);
         		System.out.print(TestDescription);

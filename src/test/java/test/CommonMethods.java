@@ -63,7 +63,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.commons.io.FileUtils;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -2652,6 +2651,16 @@ public void EndRecurringJobs(WebDriver d,String locatorID,String locatorType) th
 		try{
 		d.navigate().to(url);
 		}catch (Exception e){}
+		
+			
+	}
+	
+	public static String getPath(String filePath, String fileName){
+		  File image1 = new File(filePath);
+		  String image_path = image1.getAbsoluteFile().getParent()+"\\"+fileName;
+		  System.out.println(image_path);
+		  
+		  return image_path;
 		
 			
 	}

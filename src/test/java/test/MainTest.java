@@ -441,9 +441,7 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
   
   @BeforeTest
   public void beforeTest() throws IOException {
-	  File image1 = new File("images\\page1.jpg");
-	  String image_path = image1.getAbsoluteFile().getParent();
-	  System.out.println(image_path);
+	  
 	  
 	  fs = new FileInputStream("data.properties");
 	  prop.load(fs);
