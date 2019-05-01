@@ -1,0 +1,15 @@
+How to run this Automation Test
+1. Download and install Java
+2. Go to Environment Variables and add JAVA_HOME variable with the value of Java installation directory
+3. Download Maven and extract to c:\
+4. Go to Environment Variables and add Path variable with value of apache-maven path
+See screenshot: https://www.screencast.com/t/CSkiM4pD
+5. Clone repository to your local 
+6. To run the test, double click Runnable.bat 
+or if you want to view console after testing, open command prompt and enter the following commands
+cd <path of directory>
+mvn test
+7. To view test report go to ReportLogs folder and open html report generated
+
+Notes:
+1. Do not interfere mouse and keyboard events while test is running
