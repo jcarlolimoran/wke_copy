@@ -2665,6 +2665,16 @@ public void EndRecurringJobs(WebDriver d,String locatorID,String locatorType) th
 			
 	}
 
+	public static String getPathDir(String dirPath){
+		  File image1 = new File(dirPath);
+		  String path1 = image1.getAbsoluteFile().getAbsolutePath();
+		  System.out.println(path1);
+		  
+		  return path1;
+		
+			
+	}
+	
 	public void AcceptAlert(WebDriver d) {
 	    try {
 	        WebDriverWait wait = new WebDriverWait(d, 2);
@@ -3088,7 +3098,7 @@ public void EndRecurringJobs(WebDriver d,String locatorID,String locatorType) th
 	public static String getStringFromExcelFile(int row, int col, String f) throws IOException{
 		
 	
-		FileInputStream fsIP= new FileInputStream(new File(CommonMethods.getVariableFromProperties("DownloadPath")+f)); //Read the spreadsheet
+		FileInputStream fsIP= new FileInputStream(new File(MainTest.dPath+f)); //Read the spreadsheet
     
 		XSSFWorkbook wb = new XSSFWorkbook(fsIP); //Access the workbook
       

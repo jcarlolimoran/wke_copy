@@ -86,6 +86,7 @@ public class MainTest {
 	public static String ngroktestreportURL;
 	public boolean isAndroidApp=false;
 	public static boolean isNewTest=true;
+	public static String dPath;
 	
 	FileInputStream fs;
 	public Properties prop = new Properties();
@@ -213,11 +214,11 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
 		
 			 if(b.equals("OSXChrome")){
 				 	System.out.println("OSX Chrome");
-				 	FileUtils.cleanDirectory(new File(CommonMethods.getVariableFromProperties("DownloadPath"))); // clear download path
+				 	FileUtils.cleanDirectory(new File(dPath)); // clear download path
 				 
 				 	System.setProperty("webdriver.chrome.driver", "chromedriver");
 				 	//new code
-				 	String downloadFilepath = CommonMethods.getVariableFromProperties("DownloadPath");
+				 	String downloadFilepath = dPath;
 				 	HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 				 	chromePrefs.put("profile.default_content_settings.popups", 0);
 				 	chromePrefs.put("download.default_directory", downloadFilepath);
@@ -244,12 +245,12 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
 			 else 
 				 
 				 if(b.equals("Chrome")){
-							FileUtils.cleanDirectory(new File(CommonMethods.getVariableFromProperties("DownloadPath"))); // clear download path
+							FileUtils.cleanDirectory(new File(dPath)); // clear download path
 						 	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 							
 						 	
 						 	//new code
-						 	String downloadFilepath = CommonMethods.getVariableFromProperties("DownloadPath");
+						 	String downloadFilepath = dPath;
 						 	HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 						 	chromePrefs.put("profile.default_content_settings.popups", 0);
 						 	chromePrefs.put("download.default_directory", downloadFilepath);
@@ -283,7 +284,7 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
 		 	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		 	
 		 	//new code
-		 	String downloadFilepath = CommonMethods.getVariableFromProperties("DownloadPath");
+		 	String downloadFilepath = dPath;
 		 	HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		 	chromePrefs.put("profile.default_content_settings.popups", 0);
 		 	chromePrefs.put("download.default_directory", downloadFilepath);
@@ -441,7 +442,8 @@ private void ExecuteTestSuite(String suite, String wsite, String b) throws Excep
   
   @BeforeTest
   public void beforeTest() throws IOException {
-	  
+	  dPath = CommonMethods.getPathDir("downloads")+"\\";
+	  System.out.println("Download path is " + dPath);
 	  
 	  fs = new FileInputStream("data.properties");
 	  prop.load(fs);

@@ -2199,7 +2199,7 @@ public class Tests {
         	String[] f_Source_Target = cm.StringParser(InputKey);
         	
     		
-        	CommonMethods.csvToXLSX(CommonMethods.getVariableFromProperties("DownloadPath")+f_Source_Target[0], CommonMethods.getVariableFromProperties("DownloadPath")+f_Source_Target[1]);
+        	CommonMethods.csvToXLSX(MainTest.dPath+f_Source_Target[0], MainTest.dPath+f_Source_Target[1]);
         	
     		writehtml.writeTestLabel(suite, "Performing Test# "+ MainTest.currentTest, TestDescription);
     		System.out.println(" ");
