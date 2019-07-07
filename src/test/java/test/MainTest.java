@@ -94,9 +94,9 @@ public class MainTest {
 	
 	
 @Test (priority=1)
-public void Researchers() throws Exception{
+public void UserAdmin() throws Exception{
 	browser = CommonMethods.getVariableFromProperties("browser");
-	ExecuteTestSuite("1_Researchers",prod_site,browser);
+	ExecuteTestSuite("1_UserAdmin",prod_site,browser);
 }
 
 @Test  (priority=2)
@@ -152,6 +152,12 @@ public void OpenEndedAnswers() throws Exception{
 public void Clone_DeleteRecords() throws Exception{
 	browser = CommonMethods.getVariableFromProperties("browser");
 	ExecuteTestSuite("8_Clone_DeleteRecords",prod_site,browser);
+}
+
+@Test ( priority =11)
+public void Teachers() throws Exception{
+	browser = CommonMethods.getVariableFromProperties("browser");
+	ExecuteTestSuite("9_Teachers",prod_site,browser);
 }
 
 @Test 
