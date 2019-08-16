@@ -891,6 +891,16 @@ public class Tests {
         	
         	break;
         	
+        case "convertStudentNameForUserLogSelect":
+        	//Overlay.display(TestDescription, Action);
+        	System.out.println("Performing Test# "+ MainTest.currentTest);
+        	System.out.print(TestDescription);
+        	
+        	String newStudentName = "Automation, Student1 ("+RuntimeVariables.getVariable("student1")+")";
+        	RuntimeVariables.writeVariable("Student1_forLog", newStudentName);
+        	
+        	break;
+        	
         case "saveAsVariable":
         	//Overlay.display(TestDescription, Action);
         	System.out.println("Performing Test# "+ MainTest.currentTest);
