@@ -2217,6 +2217,15 @@ public class Tests {
     		System.out.println(" ");
         	break;
         	
+        case "copyFileToDirectory":
+        	
+        	System.out.println("Performing Test# "+ MainTest.currentTest);
+        	System.out.print("Writing Test Label on report.. "+ TestDescription);
+        	String home = System.getProperty("user.home");
+    		File n = CommonMethods.getLastModifiedFile(new File(home+"\\Downloads"));
+    		System.out.println(n.getAbsolutePath());
+    		CommonMethods.copyFileUsingStream(n, new File(MainTest.dPath+InputKey));
+        	break;
         	
         case "writeTestLabel":
         	//Overlay.display(TestDescription, Action);
@@ -2366,6 +2375,8 @@ public class Tests {
 		s11=s11.trim();
 		validation=validation.trim();
 		
+	
+		
 		if(validation.endsWith(".0"))
 		{validation = validation.replace(".0", "");}
 		
@@ -2417,7 +2428,9 @@ public class Tests {
 				validation = RuntimeVariables.getVariable(validation);
 				
 				String s11 = CommonMethods.getStringFromExcelFile(Integer.parseInt(RowColFile[0]), Integer.parseInt(RowColFile[1]), RowColFile[2]);
-			
+				System.out.println("EXPECTED STRING: "+ validation);
+				System.out.println("ACTUAL STRING SEEN ON FILE: "+ s11);
+				
         		if(s11.contains(validation)){ 
         			System.out.println("EXPECTED STRING: "+ validation);
         			System.out.println("ACTUAL STRING SEEN ON FILE: "+ s11);

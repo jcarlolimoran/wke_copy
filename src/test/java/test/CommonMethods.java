@@ -24,6 +24,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Reader;
@@ -40,6 +41,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Iterator;
@@ -711,6 +713,16 @@ public class CommonMethods {
 
 		}
 
+	}
+	
+	public static File getLastModifiedFile(File directory) {
+	    File[] files = directory.listFiles();
+	   if (files.length == 0) return null;
+	    Arrays.sort(files, new Comparator<File>() {
+	        public int compare(File o1, File o2) {
+	            return new Long(o2.lastModified()).compareTo(o1.lastModified()); 
+	        }});
+	    return files[0];
 	}
 
 	public void PressTab(WebDriver d, String locatorID, String locatorType) throws Exception {
@@ -2949,6 +2961,23 @@ public class CommonMethods {
 				System.out.println("Error trying to close resources.." + e.getMessage());
 			}
 		}
+	}
+	
+	public static void copyFileUsingStream(File source, File dest) throws IOException {
+	    InputStream is = null;
+	    OutputStream os = null;
+	    try {
+	        is = new FileInputStream(source);
+	        os = new FileOutputStream(dest);
+	        byte[] buffer = new byte[1024];
+	        int length;
+	        while ((length = is.read(buffer)) > 0) {
+	            os.write(buffer, 0, length);
+	        }
+	    } finally {
+	        is.close();
+	        os.close();
+	    }
 	}
 
 }
